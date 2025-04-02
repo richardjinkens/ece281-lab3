@@ -116,11 +116,13 @@ begin
     o_lights_R <=   "100" when f_Q(1) = '1' else  -- R1 = RA
                     "010" when f_Q(2) = '1' else  -- R2 = RB
                     "001" when f_Q(3) = '1' else  -- R3 = RC
+                    "111" when f_Q(0) = '1' else  -- hazard on
                     "000";
 
     o_lights_L <=   "001" when f_Q(4) = '1' else  -- L1 = LC
                     "010" when f_Q(5) = '1' else  -- L2 = LB
                     "100" when f_Q(6) = '1' else  -- L3 = LA
+                    "111" when f_Q(0) = '1' else  -- hazard on
                     "000";
 	
     ---------------------------------------------------------------------------------
