@@ -135,7 +135,7 @@ begin
 	        wait for k_clk_period*1;
 	         assert w_lights_L = "100" report "bad third left light" severity failure;
 	        wait for k_clk_period*1; 
-	         assert w_light_L = "000" report "left light did't go back to off" severity failure;
+	         assert w_lights_L = "000" report "left light did't go back to off" severity failure;
 	        
 	-- test hazard light
 	       w_right <= '1';
@@ -160,7 +160,7 @@ begin
 	       wait for k_clk_period*1;
 	        assert w_lights_L = "100" report "bad third left light, (input added messed it up)" severity failure;
 	       wait for k_clk_period*1; 
-	        assert w_light_L = "000" report "left light did't go back to off" severity failure;
+	        assert w_lights_L = "000" report "left light did't go back to off" severity failure;
 	       wait for k_clk_period*1;
             assert w_lights_L = "001" report "bad first left light (doesn't keep going)" severity failure;
            wait for k_clk_period*1;
