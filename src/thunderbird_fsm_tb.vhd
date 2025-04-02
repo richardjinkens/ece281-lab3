@@ -141,8 +141,8 @@ begin
 	       w_right <= '1';
 	       w_left <= '1';
 	       wait for k_clk_period*1;
-	        assert w_lights_R = "100" report "bad all right lights" severity failure;
-	        assert w_lights_L = "001" report "bad all left lights" severity failure;
+	        assert w_lights_R = "111" report "bad all right lights" severity failure;
+	        assert w_lights_L = "111" report "bad all left lights" severity failure;
 	       w_right<= '0';
 	       w_left <= '0';
 	       wait for k_clk_period*1;
