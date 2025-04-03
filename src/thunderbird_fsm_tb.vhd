@@ -116,10 +116,10 @@ begin
      -- test if light proceeds through right side
             w_right <= '1';
             wait for k_clk_period*1;
-             assert w_lights_R = "100" report "bad first right light" severity failure;
+             assert w_lights_R = "001" report "bad first right light" severity failure;
             w_right <= '0';
             wait for k_clk_period*1;
-             assert w_lights_R = "110" report "bad second right light" severity failure;
+             assert w_lights_R = "011" report "bad second right light" severity failure;
             wait for k_clk_period*1;
              assert w_lights_R = "111" report "bad third right light" severity failure;
             wait for k_clk_period*1;
